@@ -1,0 +1,18 @@
+include:
+  - ./monitoring.yml 
+services:
+  dragonfly:
+    image: docker.dragonflydb.io/dragonflydb/dragonfly
+    ulimits:
+      memlock: -1
+    ports:
+    - 6379:6379
+    command: dragonfly --requirepass data_store_password
+    hostname: datastore
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    restart: always
+    environment:
+    - REDIS_HOSTS=local:datastore:6379:0:data_store_password
+    ports:
+    - 8081:8081

@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "py"
+version = "0.1.0"
+description = ""
+authors = ["DBCodes <dennis@dbproductions.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+redis = "^5.0.8"
+Faker = "^29.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

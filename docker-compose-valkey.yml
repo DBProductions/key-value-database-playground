@@ -1,0 +1,18 @@
+include:
+  - ./monitoring.yml 
+services:
+  valkey:
+    image: docker.io/bitnami/valkey:8.0
+    environment:
+      - VALKEY_PASSWORD=data_store_password
+      - VALKEY_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    ports:
+      - '6379:6379'
+    hostname: datastore  
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    restart: always
+    environment:
+    - REDIS_HOSTS=local:datastore:6379:0:data_store_password
+    ports:
+    - 8081:8081
