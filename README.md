@@ -20,6 +20,11 @@ A flexible distributed key-value datastore that is optimized for caching and oth
 
     docker compose -f docker-compose-valkey.yml up
 
+### [KeyDB](https://github.com/Snapchat/KeyDB)
+Open source database and a faster replacement for Redis
+
+    docker compose -f docker-compose-keydb.yml up
+
 ## Monitoring
 Prometheus is available under `http://localhost:9090/` and Grafana serves here `http://localhost:3000/`.  
 For Grafana the `admin` password is simple `password`. Some community built dashboards are included.  
