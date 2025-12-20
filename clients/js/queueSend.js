@@ -19,8 +19,8 @@ const queueName = 'tasks';
         commandOptions({ isolated: true }),
         `queues:${queueName}`,
         JSON.stringify(user)
-      );
-      const task = await rPushPromise;
-      console.log(`${task} tasks in queue`);
+    );
+    const task = await rPushPromise;
+    console.log(`${task} tasks in queue`);
   }, 100);
 })();

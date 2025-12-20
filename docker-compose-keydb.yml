@@ -7,8 +7,8 @@ services:
     - 6379:6379
     command: keydb-server --server-threads 2 --requirepass data_store_password
     hostname: datastore
-    volumes:
-      - ./var/redis.conf:/etc/keydb/redis.conf
+    #volumes:
+    #  - ./var/redis.conf:/etc/keydb/redis.conf
   redis-commander:
     image: rediscommander/redis-commander:latest
     restart: always

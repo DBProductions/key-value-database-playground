@@ -2,12 +2,11 @@ include:
   - ./monitoring.yml 
 services:
   valkey:
-    image: docker.io/bitnami/valkey:8.0
-    environment:
-      - VALKEY_PASSWORD=data_store_password
-      - VALKEY_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    image: docker.io/valkey/valkey:9.0.0-alpine
     ports:
       - '6379:6379'
+    command: >
+      --requirepass "data_store_password"
     hostname: datastore  
   redis-commander:
     image: rediscommander/redis-commander:latest

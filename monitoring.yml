@@ -1,6 +1,6 @@
 services:
   exporter:
-    image: oliver006/redis_exporter:v1.67.0-alpine
+    image: oliver006/redis_exporter:v1.80.1-alpine
     environment:
       - REDIS_PASSWORD=data_store_password
     ports:

@@ -14,8 +14,8 @@ const queueName = 'tasks';
         commandOptions({ isolated: true }),
         `queues:${queueName}`,
         0
-      );
-      const task = await blPopPromise;
-      console.log(task.element);
+    );
+    const task = await blPopPromise;
+    console.log(task.element);
   }, 100);
 })();
