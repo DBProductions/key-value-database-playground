@@ -5,35 +5,37 @@ They are potential good candidates to be used as cache layer solution.
 Tested with Docker version 27.3.1 and you need `docker compose` Docker Compose version v2.29.7.  
 
 ### [Redis](https://github.com/redis/redis)
-Redis is an in-memory data structure store, used as a cache or message broker.
+The classic in-memory data structure store—used worldwide as a cache, message broker, and more.
 
     docker compose -f docker-compose-redis.yml up
 
 ### [Dragonfly](https://github.com/dragonflydb/dragonfly)
-A modern replacement for Redis and Memcached.  
-Dragonfly forbids accessing undeclared keys from scripts, it's configured inside the script source code.
+A modern, drop-in replacement for Redis and Memcached—built for speed and scale.
+⚠️ Dragonfly forbids accessing undeclared keys from scripts, it's configured inside the script source code.
 
     docker compose -f docker-compose-dragonfly.yml up
 
 ### [Valkey](https://github.com/valkey-io/valkey)
-A flexible distributed key-value datastore that is optimized for caching and other realtime workloads.
+A community-driven fork of Redis, optimized for distributed caching and real-time workloads—with flexible architecture and plugin support.
 
     docker compose -f docker-compose-valkey.yml up
 
 ### [KeyDB](https://github.com/Snapchat/KeyDB)
-Open source database and a faster replacement for Redis
+A multithreaded, high-throughput fork of Redis—fully compatible but faster, with active-active replication and cloud-native features.
 
     docker compose -f docker-compose-keydb.yml up
 
-## Monitoring
-Prometheus is available under `http://localhost:9090/` and Grafana serves here `http://localhost:3000/`.  
-For Grafana the `admin` password is simple `password`. Some community built dashboards are included.  
+## 📊 Monitoring
+ - Prometheus: http://localhost:9090/
+ - Grafana: http://localhost:3000/ (login: admin / password: password).  
+
+Included are pre-configured dashboards for all databases.  
 
 When you face problems with the Grafana login you can set a password like this.
 
     $ docker exec -it <name of grafana container> grafana-cli admin reset-admin-password <fill in password>
 
-## Clients
+## 💻 Clients
 Written in Python and for different JavaScript engines.  
 The Folder `clients` contains some examples to work with these databases without code changes.  
 
@@ -101,5 +103,5 @@ An example demonstrating its usage is provided in the `bun_redis_client.ts` file
     Send to queue
     Received from queue the following task {"id":"4e60a059-cfe3-4f04-b509-e92672e2d83a","name":"Wendy Swaniawski"}
 
-## Feedback
+## 💬 Feedback
 Star this repo if you found it useful. Use the github issue tracker to give feedback on this repo.
