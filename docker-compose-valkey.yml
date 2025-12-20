@@ -4,7 +4,7 @@ services:
   valkey:
     image: docker.io/valkey/valkey:9.0.0-alpine
     ports:
-      - '6379:6379'
+    - 6379:6379
     command: >
       --requirepass "data_store_password"
     hostname: datastore  

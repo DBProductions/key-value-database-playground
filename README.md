@@ -93,7 +93,8 @@ You can use `node`, `deno` or `bun` to run the scripts, `deno` needs `--allow-ne
     bun lua.js
 
 Since v1.3 Bun includes native bindings for interacting with the Redis Serialization Protocol (RESP3).  
-An example demonstrating its usage is provided in the `bun_redis_client.ts` file, not all RESP3 features are currently supported.
+An example demonstrating its usage is provided in the `bun_redis_client.ts` file, not all RESP3 features are currently supported.  
+It only works with Redis, Dragonfly and Valkey for now.
 
     bun bun_redis_client.ts
 

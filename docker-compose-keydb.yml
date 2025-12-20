@@ -1,14 +1,12 @@
 include:
   - ./monitoring.yml 
 services:
-  dragonfly:
+  keydb:
     image: eqalpha/keydb:x86_64_v5.3.3
     ports:
     - 6379:6379
     command: keydb-server --server-threads 2 --requirepass data_store_password
     hostname: datastore
-    #volumes:
-    #  - ./var/redis.conf:/etc/keydb/redis.conf
   redis-commander:
     image: rediscommander/redis-commander:latest
     restart: always
