@@ -2,7 +2,7 @@ include:
   - ./monitoring.yml 
 services:
   keydb:
-    image: eqalpha/keydb:x86_64_v5.3.3
+    image: eqalpha/keydb:x86_64_v6.3.3
     ports:
     - 6379:6379
     command: keydb-server --server-threads 2 --requirepass data_store_password

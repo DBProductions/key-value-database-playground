@@ -94,9 +94,12 @@ You can use `node`, `deno` or `bun` to run the scripts, `deno` needs `--allow-ne
 
 Since v1.3 Bun includes native bindings for interacting with the Redis Serialization Protocol (RESP3).  
 An example demonstrating its usage is provided in the `bun_redis_client.ts` file, not all RESP3 features are currently supported.  
-It only works with Redis, Dragonfly and Valkey for now.
 
     bun bun_redis_client.ts
+    👤 Created user
+    ✅ Connected to Redis server
+    Send to queue
+    Received from queue the following task {"id":"4e60a059-cfe3-4f04-b509-e92672e2d83a","name":"Wendy Swaniawski"}
 
 ## Feedback
 Star this repo if you found it useful. Use the github issue tracker to give feedback on this repo.

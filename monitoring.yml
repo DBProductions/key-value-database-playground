@@ -16,8 +16,6 @@ services:
       - "--web.console.templates=/etc/prometheus/consoles"
     ports:
     - 9090:9090
-    #links:
-    #  - redis:redis
     volumes:
       - ./var/data/prometheus:/prometheus
       - ./var/prometheus/config:/etc/prometheus
