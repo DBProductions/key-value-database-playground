@@ -75,7 +75,7 @@ Project and dependency management is done with [uv](https://docs.astral.sh/uv/).
     uv run python lua.py
 
 ### JavaScript
-The JavaScript clients are based on [redis](https://www.npmjs.com/package/redis).  
+The JavaScript clients are based on [redis](https://www.npmjs.com/package/redis) and [BullMQ](https://docs.bullmq.io/).  
 You can use `node`, `deno` or `bun` to run the scripts, `deno` needs `--allow-net` for the `run` command.
 
     cd /clients/js
@@ -93,6 +93,11 @@ You can use `node`, `deno` or `bun` to run the scripts, `deno` needs `--allow-ne
 
     # lua script
     bun lua.js
+
+BullMQ is a fast and robust queue system, where a queue is list of jobs and workers receiving the jobs.
+
+    bun bullmqQueue.js
+    bun bullmqWorker.js
 
 Since v1.3 Bun includes native bindings for interacting with the Redis Serialization Protocol (RESP3).  
 An example demonstrating its usage is provided in the `bun_redis_client.ts` file, not all RESP3 features are currently supported.  

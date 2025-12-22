@@ -1,4 +1,5 @@
-import { createClient, commandOptions } from 'redis';
+import pkg from 'redis';
+const { createClient } = pkg;
 
 const redisPassword = 'data_store_password';
 const queueName = 'tasks';
@@ -11,7 +12,6 @@ const queueName = 'tasks';
 
   setInterval(async () => {
     const blPopPromise = client.blPop(
-        commandOptions({ isolated: true }),
         `queues:${queueName}`,
         0
     );

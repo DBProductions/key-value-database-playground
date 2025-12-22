@@ -1,4 +1,6 @@
-import { createClient, commandOptions } from 'redis';
+import pkg from 'redis';
+const { createClient } = pkg;
+//import { createClient, commandOptions } from 'redis';
 import { faker } from '@faker-js/faker';
 
 const redisPassword = 'data_store_password';
@@ -16,7 +18,6 @@ const queueName = 'tasks';
       name: faker.person.fullName()
     };      
     const rPushPromise = client.rPush(
-        commandOptions({ isolated: true }),
         `queues:${queueName}`,
         JSON.stringify(user)
     );
