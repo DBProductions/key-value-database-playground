@@ -37,7 +37,7 @@ When you face problems with the Grafana login you can set a password like this.
 
 ## 💻 Clients
 Written in Python and for different JavaScript engines.  
-The Folder `clients` contains some examples to work with these databases without code changes.  
+The folder `clients` contains some examples to work with these databases without code changes.  
 
 **Queuing**  
 The queue is a list that appends or removes the last element, Last In – First Out principle.  
