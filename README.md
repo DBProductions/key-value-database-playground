@@ -46,7 +46,7 @@ The queue is a list that appends or removes the last element, Last In – First 
 For the possibility of losing messages the sender iterates over the last messages until a receiver is connected.
 
 **Create User data**  
-User data is stored with key `user:<uuid>` and hashes `persoanl`, `address` and `images`.
+User data is stored with key `user:<uuid>` and hashes `personal`, `address` and `images`.
 
 **Lua**  
 Some simple Lua scripts to count and get the user data.  
