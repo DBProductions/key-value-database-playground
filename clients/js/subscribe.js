@@ -9,6 +9,6 @@ const redisPassword = 'data_store_password';
 
   await subscriber.connect();
   await subscriber.subscribe('queue-job', (message) => {
-    console.log(message); // 'message'
+    console.log(message);
   });  
 })();

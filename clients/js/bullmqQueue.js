@@ -14,7 +14,6 @@ async function addJobs() {
     name: faker.person.fullName()
   };  
   await myQueue.add('newUser', user);
-  await myQueue.add('newUse', user);
 }
 
 (async () => {
