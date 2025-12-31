@@ -74,11 +74,6 @@ Project and dependency management is done with [uv](https://docs.astral.sh/uv/).
     # lua script
     uv run python lua.py
 
-BullMQ is a fast and robust queue system, where a queue is list of jobs and workers receiving the jobs.
-
-    bun bullmq_queue.py
-    bun bullmq_worker.py
-
 ### JavaScript
 The JavaScript clients are based on [redis](https://www.npmjs.com/package/redis) and [BullMQ](https://docs.bullmq.io/).  
 You can use `node`, `deno` or `bun` to run the scripts, `deno` needs `--allow-net` for the `run` command.
